@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		B514DC63265079EB007912DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B514DC62265079EB007912DA /* Foundation.framework */; };
 		B514DC6B265079EB007912DA /* hsl.mm in Sources */ = {isa = PBXBuildFile; fileRef = B514DC6A265079EB007912DA /* hsl.mm */; };
+		B514DC7826507F03007912DA /* hsl-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B514DC7726507F03007912DA /* hsl-Prefix.pch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B514DC5F265079EB007912DA /* hsl.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = hsl.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		B514DC62265079EB007912DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B514DC67265079EB007912DA /* control */ = {isa = PBXFileReference; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
-		B514DC69265079EB007912DA /* hsl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "hsl-Prefix.pch"; path = "../hsl-Prefix.pch"; sourceTree = "<group>"; };
 		B514DC6A265079EB007912DA /* hsl.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = hsl.mm; sourceTree = "<group>"; };
 		B514DC6F265079EB007912DA /* hsl.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = hsl.plist; sourceTree = "<group>"; };
+		B514DC7726507F03007912DA /* hsl-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "hsl-Prefix.pch"; path = "hsl/hsl-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +88,7 @@
 		B514DC68265079EB007912DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B514DC69265079EB007912DA /* hsl-Prefix.pch */,
+				B514DC7726507F03007912DA /* hsl-Prefix.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -123,6 +124,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B514DC7826507F03007912DA /* hsl-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +215,13 @@
 		B514DC70265079EB007912DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+					arm64e,
+				);
+				CODE_SIGNING_ALLOWED = NO;
 				COPY_PHASE_STRIP = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -238,6 +247,13 @@
 		B514DC71265079EB007912DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+					arm64e,
+				);
+				CODE_SIGNING_ALLOWED = NO;
 				COPY_PHASE_STRIP = NO;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -283,15 +299,15 @@
 					"$(MonkeyDevTheosPath)/vendor/include/**",
 				);
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
-				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevBuildPackageOnAnyBuild = YES;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = "";
+				MonkeyDevDeviceIP = 192.168.1.82;
 				MonkeyDevDevicePassword = "";
 				MonkeyDevDevicePort = "";
 				MonkeyDevInstallOnAnyBuild = YES;
 				MonkeyDevInstallOnProfiling = YES;
-				MonkeyDevkillProcessOnInstall = SpringBoard;
+				MonkeyDevkillProcessOnInstall = Contacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,15 +328,15 @@
 					"$(MonkeyDevTheosPath)/vendor/include/**",
 				);
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
-				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevBuildPackageOnAnyBuild = YES;
 				MonkeyDevClearUiCacheOnInstall = NO;
 				MonkeyDevCopyOnBuild = NO;
-				MonkeyDevDeviceIP = "";
+				MonkeyDevDeviceIP = 192.168.1.82;
 				MonkeyDevDevicePassword = "";
 				MonkeyDevDevicePort = "";
 				MonkeyDevInstallOnAnyBuild = YES;
 				MonkeyDevInstallOnProfiling = YES;
-				MonkeyDevkillProcessOnInstall = SpringBoard;
+				MonkeyDevkillProcessOnInstall = Contacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
